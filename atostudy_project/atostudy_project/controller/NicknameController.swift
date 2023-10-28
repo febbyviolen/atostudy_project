@@ -51,8 +51,8 @@ class NicknameController: UIViewController, UITextFieldDelegate {
     
     private func setupUI(){
         keyboardNotShownUI()
-        textFieldNotOk()
         setupButtonUI()
+        textFieldNotOk()
         setupTextField()
         
     }
@@ -60,9 +60,9 @@ class NicknameController: UIViewController, UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if textField.text?.count ?? 0 > 1
             && textField.text?.count ?? 0 < 13   {
-            textFieldNotOk()
-        } else {
             textFieldIsOk()
+        } else {
+            textFieldNotOk()
         }
     }
     
@@ -81,7 +81,6 @@ class NicknameController: UIViewController, UITextFieldDelegate {
             nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             nextButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             nextButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -16)
-            
         ])
     }
     
@@ -119,14 +118,14 @@ class NicknameController: UIViewController, UITextFieldDelegate {
         nextButton.layer.cornerRadius = 16
         nextButton.titleLabel?.font = UIFont(name: "Spoqa Han Sans Neo Bold", size: 16)
         nextButton.titleLabel?.textColor = .white
-        nextButton.backgroundColor = UIColor(named: "black 500")
+        nextButton.backgroundColor = UIColor(named: "primary 900")
     }
     
     private func textFieldNotOk() {
         nextButton.layer.cornerRadius = 16
         nextButton.titleLabel?.font = UIFont(name: "Spoqa Han Sans Neo Bold", size: 16)
         nextButton.titleLabel?.textColor = .white
-        nextButton.backgroundColor = UIColor(named: "primary 900")
+        nextButton.backgroundColor = UIColor(named: "black 500")
     }
 
 }

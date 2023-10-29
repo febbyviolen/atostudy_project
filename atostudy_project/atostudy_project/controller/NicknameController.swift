@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NicknameController: UIViewController, UITextFieldDelegate {
+class NicknameController: UIViewController {
 
     @IBOutlet weak var backButton: UINavigationItem!
     @IBOutlet weak var nickNameTextField: UITextField!
@@ -41,7 +41,7 @@ class NicknameController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func nextButtonTapped() {
-        
+        self.performSegue(withIdentifier: "showSelectCharacterController", sender: self)
     }
                                   
     @objc
@@ -54,24 +54,6 @@ class NicknameController: UIViewController, UITextFieldDelegate {
         setupButtonUI()
         textFieldNotOk()
         setupTextField()
-        
-    }
-    
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        if textField.text?.count ?? 0 > 1
-            && textField.text?.count ?? 0 < 13   {
-            textFieldIsOk()
-        } else {
-            textFieldNotOk()
-        }
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        keyboardShownUI()
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        keyboardNotShownUI()
     }
     
     private func setupButtonUI() {
@@ -93,6 +75,9 @@ class NicknameController: UIViewController, UITextFieldDelegate {
             clearButton.setImage(img, for: .normal)
             clearButton.tintColor = UIColor(named: "black 700")
         }
+        
+        //test
+        nickNameTextField.text = "aa"
     }
     
     private func setupNavigationBar() {
@@ -127,5 +112,23 @@ class NicknameController: UIViewController, UITextFieldDelegate {
         nextButton.titleLabel?.textColor = .white
         nextButton.backgroundColor = UIColor(named: "black 500")
     }
+}
 
+extension NicknameController: UITextFieldDelegate {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        if textField.text?.count ?? 0 > 1
+            && textField.text?.count ?? 0 < 13   {
+            textFieldIsOk()
+        } else {
+            textFieldNotOk()
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        keyboardShownUI()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        keyboardNotShownUI()
+    }
 }

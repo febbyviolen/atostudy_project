@@ -10,18 +10,7 @@ import UIKit
 class SelectCharacterController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView?
-    
-    lazy var nextButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.cornerRadius = 16
-        button.setTitle("다음", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont(name: "Spoqa Han Sans Neo Bold", size: 16)
-        button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
-        button.backgroundColor = UIColor(named: "primary 900")
-        return button
-    }()
+    @IBOutlet var nextButton: UIButton?
     
     let reuseId = "characterCell"
     
@@ -51,45 +40,38 @@ class SelectCharacterController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        setupUI()
         setupCollectionView()
         getData()
-        view.addSubview(nextButton)
-        NSLayoutConstraint.activate([
-            nextButton.heightAnchor.constraint(equalToConstant: 56),
-            nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            nextButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            nextButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -16)
-        ])
         
     }
     
-    @objc
-    private func nextButtonTapped() {
-//        API.shared
-//            .signUp(snsType: "KAKAO", nickName: "aa", character: 1) { res in
-//                if res.data != nil {
-        var test = signUpResponse(result: true, 
-                                  message: "생성되었습니다",
-                                  data: signUpData(snsType: "카카오" , nickName: "밀리", character: 1, characterName: "노노"))
-                    
-//                } else if res.error != nil {
-//                    let attributedString = NSAttributedString(string: res.error?.message ?? "", attributes: [
-//                        NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16), //your font here
-//                        NSAttributedString.Key.foregroundColor : UIColor(named: "primary 900")!
-//                        
-//                    ])
-//                    
-//                    let alert = UIAlertController(title: res.error?.message, message: "", preferredStyle: .alert)
-//                    alert.setValue(attributedString, forKey: "attributedTitle")
-//                    
-//                    let okAction = UIAlertAction(title: "네", style: .default, handler: nil)
-//                    okAction.titleTextColor = UIColor(named: "black 900")
-//                    
-//                    alert.addAction(okAction)
-//                    self.present(alert, animated: true)
-//                    
-//                }
-//        }
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        //        API.shared
+        //            .signUp(snsType: "KAKAO", nickName: "aa", character: 1) { res in
+        //                if res.data != nil {
+                var test = signUpResponse(result: true,
+                                          message: "생성되었습니다",
+                                          data: signUpData(snsType: "카카오" , nickName: "밀리", character: 1, characterName: "노노"))
+                            
+        //                } else if res.error != nil {
+        //                    let attributedString = NSAttributedString(string: res.error?.message ?? "", attributes: [
+        //                        NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16), //your font here
+        //                        NSAttributedString.Key.foregroundColor : UIColor(named: "primary 900")!
+        //
+        //                    ])
+        //
+        //                    let alert = UIAlertController(title: res.error?.message, message: "", preferredStyle: .alert)
+        //                    alert.setValue(attributedString, forKey: "attributedTitle")
+        //
+        //                    let okAction = UIAlertAction(title: "네", style: .default, handler: nil)
+        //                    okAction.titleTextColor = UIColor(named: "black 900")
+        //
+        //                    alert.addAction(okAction)
+        //                    self.present(alert, animated: true)
+        //
+        //                }
+        //        }
     }
     
     private func getData(){
@@ -114,6 +96,10 @@ class SelectCharacterController: UIViewController {
         collectionView?.dataSource = self
         collectionView?.register(UINib(nibName: "CharacterCell", bundle: nil), forCellWithReuseIdentifier:
                                     "characterCell")
+    }
+    
+    private func setupUI() {
+        nextButton?.layer.cornerRadius = 16
     }
     
 }

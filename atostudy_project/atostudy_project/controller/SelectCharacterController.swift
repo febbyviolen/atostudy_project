@@ -50,10 +50,12 @@ class SelectCharacterController: UIViewController {
         //        API.shared
         //            .signUp(snsType: "KAKAO", nickName: "aa", character: 1) { res in
         //                if res.data != nil {
-                var test = signUpResponse(result: true,
-                                          message: "생성되었습니다",
-                                          data: signUpData(snsType: "카카오" , nickName: "밀리", character: 1, characterName: "노노"))
-                            
+        var test = signUpResponse(result: true,
+                                  message: "생성되었습니다",
+                                  data: signUpData(snsType: "카카오" , nickName: "밀리", character: 1, characterName: "노노"))
+        self.performSegue(withIdentifier: "showSignUpController", sender: self)
+        
+        
         //                } else if res.error != nil {
         //                    let attributedString = NSAttributedString(string: res.error?.message ?? "", attributes: [
         //                        NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16), //your font here
@@ -75,9 +77,7 @@ class SelectCharacterController: UIViewController {
     }
     
     private func getData(){
-    //        API.shared.getCharacter { res in
-    //            print(res)
-    //        }
+        //getData..
     }
     
     private func setupCollectionView() {
@@ -100,12 +100,14 @@ class SelectCharacterController: UIViewController {
     
     private func setupUI() {
         nextButton?.layer.cornerRadius = 16
+        nextButton?.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
     }
     
 }
 
 extension SelectCharacterController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //test data
         return testCharacterData.count
     }
     
@@ -119,7 +121,9 @@ extension SelectCharacterController: UICollectionViewDelegate, UICollectionViewD
             cell.background?.layer.borderWidth = 2
         }
         
-        cell.config(imgURL: testCharacterData[indexPath.row].filePath, engName: testCharacterData[indexPath.row].engName)
+        //test data
+        let data = testCharacterData
+        cell.config(imgURL: data[indexPath.row].filePath, engName: data[indexPath.row].engName)
         return cell
     }
 }

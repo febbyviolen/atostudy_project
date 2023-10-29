@@ -20,6 +20,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var recentGoogleLoginBubble: UIView?
     
     var recentLogin = "kakao"
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

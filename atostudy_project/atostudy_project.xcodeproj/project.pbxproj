@@ -7,15 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2753C13D3AAD64891B08265B /* Pods_atostudy_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0D11223FC94BDA8111EA42 /* Pods_atostudy_project.framework */; };
+		8026BBDD2AECEF9D00711023 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8026BBDC2AECEF9D00711023 /* API.swift */; };
+		8026BBDF2AECFED900711023 /* SelectCharacterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8026BBDE2AECFED900711023 /* SelectCharacterController.swift */; };
+		8026BBE52AED0B6600711023 /* characterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8026BBE42AED0B6600711023 /* characterModel.swift */; };
+		8026BBEA2AED21AA00711023 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8026BBE82AED21AA00711023 /* CharacterCell.swift */; };
+		8026BBEB2AED21AA00711023 /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8026BBE92AED21AA00711023 /* CharacterCell.xib */; };
 		806715C92AE9448F00E1A3D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806715C82AE9448F00E1A3D4 /* AppDelegate.swift */; };
 		806715CB2AE9448F00E1A3D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806715CA2AE9448F00E1A3D4 /* SceneDelegate.swift */; };
 		806715CD2AE9448F00E1A3D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806715CC2AE9448F00E1A3D4 /* ViewController.swift */; };
 		806715D02AE9448F00E1A3D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 806715CE2AE9448F00E1A3D4 /* Main.storyboard */; };
 		806715D22AE9449100E1A3D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 806715D12AE9449100E1A3D4 /* Assets.xcassets */; };
 		806715D52AE9449100E1A3D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 806715D32AE9449100E1A3D4 /* LaunchScreen.storyboard */; };
+		806715E02AEAA07F00E1A3D4 /* SpoqaHanSansNeo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 806715DD2AEA882400E1A3D4 /* SpoqaHanSansNeo-Regular.otf */; };
+		806715E12AEAA08100E1A3D4 /* SpoqaHanSansNeo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 806715DE2AEA88C200E1A3D4 /* SpoqaHanSansNeo-Medium.otf */; };
+		806715E22AEAA08300E1A3D4 /* SpoqaHanSansNeo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 806715DF2AEAA02000E1A3D4 /* SpoqaHanSansNeo-Bold.otf */; };
+		806715E62AEAA49E00E1A3D4 /* NicknameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806715E52AEAA49E00E1A3D4 /* NicknameController.swift */; };
+		80676CFF2AEE08C100D377BE /* APIResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80676CFE2AEE08C100D377BE /* APIResModel.swift */; };
+		80676D012AEE1A5300D377BE /* UIAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80676D002AEE1A5300D377BE /* UIAlertAction.swift */; };
+		80676D042AEE29C800D377BE /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80676D032AEE29C800D377BE /* SignUpController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		257ACA266DE2D7ACB2D4AB66 /* Pods-atostudy_project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atostudy_project.debug.xcconfig"; path = "Target Support Files/Pods-atostudy_project/Pods-atostudy_project.debug.xcconfig"; sourceTree = "<group>"; };
+		8026BBDC2AECEF9D00711023 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = ../../../../Documents/API.swift; sourceTree = "<group>"; };
+		8026BBDE2AECFED900711023 /* SelectCharacterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCharacterController.swift; sourceTree = "<group>"; };
+		8026BBE42AED0B6600711023 /* characterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = characterModel.swift; sourceTree = "<group>"; };
+		8026BBE82AED21AA00711023 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		8026BBE92AED21AA00711023 /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
 		806715C52AE9448F00E1A3D4 /* atostudy_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = atostudy_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		806715C82AE9448F00E1A3D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		806715CA2AE9448F00E1A3D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +43,15 @@
 		806715D12AE9449100E1A3D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		806715D42AE9449100E1A3D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		806715D62AE9449100E1A3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		806715DD2AEA882400E1A3D4 /* SpoqaHanSansNeo-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Regular.otf"; sourceTree = "<group>"; };
+		806715DE2AEA88C200E1A3D4 /* SpoqaHanSansNeo-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Medium.otf"; sourceTree = "<group>"; };
+		806715DF2AEAA02000E1A3D4 /* SpoqaHanSansNeo-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Bold.otf"; sourceTree = "<group>"; };
+		806715E52AEAA49E00E1A3D4 /* NicknameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameController.swift; sourceTree = "<group>"; };
+		80676CFE2AEE08C100D377BE /* APIResModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResModel.swift; sourceTree = "<group>"; };
+		80676D002AEE1A5300D377BE /* UIAlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertAction.swift; sourceTree = "<group>"; };
+		80676D032AEE29C800D377BE /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		DA7E90E2A7DB27F10C33F1FE /* Pods-atostudy_project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atostudy_project.release.xcconfig"; path = "Target Support Files/Pods-atostudy_project/Pods-atostudy_project.release.xcconfig"; sourceTree = "<group>"; };
+		DE0D11223FC94BDA8111EA42 /* Pods_atostudy_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_atostudy_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +59,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2753C13D3AAD64891B08265B /* Pods_atostudy_project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49EBE5A4223551D25F4EBFAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE0D11223FC94BDA8111EA42 /* Pods_atostudy_project.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8026BBE02AED02B600711023 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				8026BBE82AED21AA00711023 /* CharacterCell.swift */,
+				8026BBE92AED21AA00711023 /* CharacterCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		8026BBE32AED0B5400711023 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				8026BBE42AED0B6600711023 /* characterModel.swift */,
+				80676CFE2AEE08C100D377BE /* APIResModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		806715BC2AE9448F00E1A3D4 = {
 			isa = PBXGroup;
 			children = (
 				806715C72AE9448F00E1A3D4 /* atostudy_project */,
 				806715C62AE9448F00E1A3D4 /* Products */,
+				94104BC5009868AD6738E702 /* Pods */,
+				49EBE5A4223551D25F4EBFAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +113,58 @@
 		806715C72AE9448F00E1A3D4 /* atostudy_project */ = {
 			isa = PBXGroup;
 			children = (
+				8026BBDC2AECEF9D00711023 /* API.swift */,
+				8026BBE32AED0B5400711023 /* model */,
+				8026BBE02AED02B600711023 /* view */,
+				806715DC2AEA881600E1A3D4 /* fonts */,
+				806715E42AEAA47700E1A3D4 /* controller */,
 				806715C82AE9448F00E1A3D4 /* AppDelegate.swift */,
 				806715CA2AE9448F00E1A3D4 /* SceneDelegate.swift */,
-				806715CC2AE9448F00E1A3D4 /* ViewController.swift */,
 				806715CE2AE9448F00E1A3D4 /* Main.storyboard */,
-				806715D12AE9449100E1A3D4 /* Assets.xcassets */,
 				806715D32AE9449100E1A3D4 /* LaunchScreen.storyboard */,
+				806715D12AE9449100E1A3D4 /* Assets.xcassets */,
 				806715D62AE9449100E1A3D4 /* Info.plist */,
+				80676D022AEE1A5800D377BE /* extensions */,
 			);
 			path = atostudy_project;
+			sourceTree = "<group>";
+		};
+		806715DC2AEA881600E1A3D4 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				806715DD2AEA882400E1A3D4 /* SpoqaHanSansNeo-Regular.otf */,
+				806715DE2AEA88C200E1A3D4 /* SpoqaHanSansNeo-Medium.otf */,
+				806715DF2AEAA02000E1A3D4 /* SpoqaHanSansNeo-Bold.otf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		806715E42AEAA47700E1A3D4 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				806715CC2AE9448F00E1A3D4 /* ViewController.swift */,
+				806715E52AEAA49E00E1A3D4 /* NicknameController.swift */,
+				8026BBDE2AECFED900711023 /* SelectCharacterController.swift */,
+				80676D032AEE29C800D377BE /* SignUpController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		80676D022AEE1A5800D377BE /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				80676D002AEE1A5300D377BE /* UIAlertAction.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		94104BC5009868AD6738E702 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				257ACA266DE2D7ACB2D4AB66 /* Pods-atostudy_project.debug.xcconfig */,
+				DA7E90E2A7DB27F10C33F1FE /* Pods-atostudy_project.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 806715D92AE9449100E1A3D4 /* Build configuration list for PBXNativeTarget "atostudy_project" */;
 			buildPhases = (
+				614D11610725F307D2EB9588 /* [CP] Check Pods Manifest.lock */,
 				806715C12AE9448F00E1A3D4 /* Sources */,
 				806715C22AE9448F00E1A3D4 /* Frameworks */,
 				806715C32AE9448F00E1A3D4 /* Resources */,
+				CDC587D6226166F515AD608B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,13 +227,59 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8026BBEB2AED21AA00711023 /* CharacterCell.xib in Resources */,
 				806715D52AE9449100E1A3D4 /* LaunchScreen.storyboard in Resources */,
 				806715D22AE9449100E1A3D4 /* Assets.xcassets in Resources */,
 				806715D02AE9448F00E1A3D4 /* Main.storyboard in Resources */,
+				806715E22AEAA08300E1A3D4 /* SpoqaHanSansNeo-Bold.otf in Resources */,
+				806715E12AEAA08100E1A3D4 /* SpoqaHanSansNeo-Medium.otf in Resources */,
+				806715E02AEAA07F00E1A3D4 /* SpoqaHanSansNeo-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		614D11610725F307D2EB9588 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-atostudy_project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDC587D6226166F515AD608B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-atostudy_project/Pods-atostudy_project-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-atostudy_project/Pods-atostudy_project-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-atostudy_project/Pods-atostudy_project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		806715C12AE9448F00E1A3D4 /* Sources */ = {
@@ -139,8 +287,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				806715CD2AE9448F00E1A3D4 /* ViewController.swift in Sources */,
+				806715E62AEAA49E00E1A3D4 /* NicknameController.swift in Sources */,
+				80676CFF2AEE08C100D377BE /* APIResModel.swift in Sources */,
 				806715C92AE9448F00E1A3D4 /* AppDelegate.swift in Sources */,
+				8026BBEA2AED21AA00711023 /* CharacterCell.swift in Sources */,
 				806715CB2AE9448F00E1A3D4 /* SceneDelegate.swift in Sources */,
+				8026BBE52AED0B6600711023 /* characterModel.swift in Sources */,
+				8026BBDD2AECEF9D00711023 /* API.swift in Sources */,
+				80676D012AEE1A5300D377BE /* UIAlertAction.swift in Sources */,
+				80676D042AEE29C800D377BE /* SignUpController.swift in Sources */,
+				8026BBDF2AECFED900711023 /* SelectCharacterController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,11 +443,13 @@
 		};
 		806715DA2AE9449100E1A3D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 257ACA266DE2D7ACB2D4AB66 /* Pods-atostudy_project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = atostudy_project/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -299,6 +457,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,11 +473,13 @@
 		};
 		806715DB2AE9449100E1A3D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA7E90E2A7DB27F10C33F1FE /* Pods-atostudy_project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = atostudy_project/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -326,6 +487,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

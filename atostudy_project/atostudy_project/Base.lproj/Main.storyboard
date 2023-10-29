@@ -267,13 +267,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한글, 영어, 숫자 중 2자~12자로 가능해요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGz-FU-HEc">
-                                <rect key="frame" x="20" y="261.33333333333331" width="204" height="16"/>
+                                <rect key="frame" x="20" y="261.33333333333331" width="203.66666666666666" height="15.333333333333314"/>
                                 <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="12"/>
                                 <color key="textColor" name="primary 900"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUh-6b-oxn">
-                                <rect key="frame" x="346" y="261.33333333333331" width="27" height="16"/>
+                                <rect key="frame" x="346.66666666666669" y="261.33333333333331" width="26.333333333333314" height="15.333333333333314"/>
                                 <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="12"/>
                                 <color key="textColor" name="black 700"/>
                                 <nil key="highlightedColor"/>
@@ -338,10 +338,10 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4kF-sv-pj9">
-                                <rect key="frame" x="0.0" y="289.33333333333331" width="393" height="319.99999999999994"/>
+                                <rect key="frame" x="0.0" y="289.33333333333331" width="393" height="329.99999999999994"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="320" id="noi-Zt-aCh"/>
+                                    <constraint firstAttribute="height" constant="330" id="noi-Zt-aCh"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b6X-Yy-bC6">
                                     <size key="itemSize" width="204" height="301"/>
@@ -351,7 +351,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="characterCell" id="M6b-as-z58" customClass="CharacterCell" customModule="atostudy_project" customModuleProvider="target">
-                                        <rect key="frame" x="100" y="9.3333333333333339" width="204" height="301"/>
+                                        <rect key="frame" x="100" y="14.333333333333334" width="204" height="301"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7cc-c4-QoE">
                                             <rect key="frame" x="0.0" y="0.0" width="204" height="301"/>

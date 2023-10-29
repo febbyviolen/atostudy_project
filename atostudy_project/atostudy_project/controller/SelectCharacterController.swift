@@ -122,7 +122,6 @@ class SelectCharacterController: UIViewController {
     }
     
     private func setupCollectionView() {
-        
         collectionView?.collectionViewLayout = collectionViewFlowLayout
         collectionView?.isScrollEnabled = true
         collectionView?.showsHorizontalScrollIndicator = false
@@ -203,14 +202,21 @@ extension SelectCharacterController: UICollectionViewDelegateFlowLayout {
         let nextCell = collectionView?.cellForItem(at: IndexPath(row: nextIndex, section: 0)) as? CharacterCell
         let lastCell = collectionView?.cellForItem(at: IndexPath(row: lastIndex, section: 0)) as? CharacterCell
         
-        currentCell?.container?.transform = CGAffineTransform(scaleX: 1 - value, y: 1 - value)
-        currentCell?.background?.layer.borderColor = UIColor(named: "primary 900")?.cgColor
-        currentCell?.background?.layer.borderWidth = 2
-        selectedCharacter = curIndex + 1
-        
-        nextCell?.container?.transform = CGAffineTransform(scaleX: 0.7 + value, y: 0.7 + value)
-        nextCell?.background?.layer.borderWidth = 0
-        lastCell?.background?.layer.borderWidth = 0
+        if xOffset < 0 && curIndex == 0{
+//            print(xOffset)
+        } else {
+            currentCell?.container?.transform = CGAffineTransform(scaleX: 1 - value, y: 1 - value)
+            currentCell?.background?.layer.borderColor = UIColor(named: "primary 900")?.cgColor
+            currentCell?.background?.layer.borderWidth = 2
+            selectedCharacter = curIndex + 1
+            
+            nextCell?.container?.transform = CGAffineTransform(scaleX: 0.7 + value, y: 0.7 + value)
+            
+            nextCell?.background?.layer.borderWidth = 0
+            lastCell?.background?.layer.borderWidth = 0
+        }
     }
+    
+    
 }
 

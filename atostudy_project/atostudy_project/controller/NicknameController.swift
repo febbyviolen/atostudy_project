@@ -85,14 +85,10 @@ class NicknameController: UIViewController {
             clearButton.setImage(img, for: .normal)
             clearButton.tintColor = UIColor(named: "black 700")
         }
-        
-        //test
-        nickNameTextField.text = "aa"
     }
     
     private func setupNavigationBar() {
         self.navigationController?.navigationBar.topItem?.backButtonDisplayMode = .minimal
-        self.navigationController?.navigationBar.tintColor = UIColor(named: "black 900")
     }
     
     private func keyboardNotShownUI() {

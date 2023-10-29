@@ -94,11 +94,11 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가입한 계정으로 로그인!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7L-uO-A2A">
-                                        <rect key="frame" x="7" y="23.333333333333371" width="104" height="28.666666666666671"/>
+                                        <rect key="frame" x="7" y="22.333333333333371" width="104" height="30.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="104" id="bOu-vU-CXx"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Medium" family="Spoqa Han Sans Neo" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -123,11 +123,11 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가입한 계정으로 로그인!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZQ-w7-8Ud">
-                                        <rect key="frame" x="7" y="23.333333333333371" width="104" height="28.666666666666671"/>
+                                        <rect key="frame" x="7" y="22.333333333333371" width="104" height="30.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="104" id="b4X-wX-36N"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Medium" family="Spoqa Han Sans Neo" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -152,11 +152,11 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가입한 계정으로 로그인!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZV-0S-22z">
-                                        <rect key="frame" x="7" y="23.333333333333371" width="104" height="28.666666666666671"/>
+                                        <rect key="frame" x="7" y="22.333333333333371" width="104" height="30.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="104" id="NEi-x7-Owu"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Medium" family="Spoqa Han Sans Neo" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -181,11 +181,11 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가입한 계정으로 로그인!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1j5-mw-dmM">
-                                        <rect key="frame" x="7" y="23.333333333333371" width="104" height="28.666666666666671"/>
+                                        <rect key="frame" x="7" y="22.333333333333371" width="104" height="30.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="104" id="xwa-rQ-eKo"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Medium" family="Spoqa Han Sans Neo" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -199,12 +199,19 @@
                                     <constraint firstAttribute="width" constant="118" id="iBq-nm-QRX"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sns 계정으로 로그인 및 간편 가입하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukt-Db-nBl">
+                                <rect key="frame" x="103.33333333333333" y="569.66666666666663" width="186.66666666666669" height="15.333333333333371"/>
+                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="12"/>
+                                <color key="textColor" name="black 800"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9e2-56-CJi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Td-Xh-Dkw"/>
                             <constraint firstItem="tK9-Zh-aLh" firstAttribute="top" secondItem="9e2-56-CJi" secondAttribute="bottom" constant="8" id="FID-2P-T9e"/>
+                            <constraint firstItem="ukt-Db-nBl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GZ1-tk-FpB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9e2-56-CJi" secondAttribute="trailing" constant="52" id="INg-cV-RST"/>
                             <constraint firstItem="GL7-B0-ZVv" firstAttribute="centerX" secondItem="Xzz-w5-epf" secondAttribute="centerX" id="JgS-1D-V5h"/>
                             <constraint firstItem="YJA-nI-lKB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OyR-0p-zWn"/>
@@ -213,6 +220,7 @@
                             <constraint firstItem="LoH-PG-gjz" firstAttribute="top" secondItem="9e2-56-CJi" secondAttribute="bottom" constant="8" symbolic="YES" id="TKb-Jz-dRf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9e2-56-CJi" secondAttribute="bottom" constant="147" id="W7Q-bS-9ad"/>
                             <constraint firstItem="GL7-B0-ZVv" firstAttribute="top" secondItem="9e2-56-CJi" secondAttribute="bottom" constant="8" id="WHr-dF-0Ib"/>
+                            <constraint firstItem="9e2-56-CJi" firstAttribute="top" secondItem="ukt-Db-nBl" secondAttribute="bottom" constant="16" id="WYp-XG-PS3"/>
                             <constraint firstItem="tK9-Zh-aLh" firstAttribute="centerX" secondItem="zM5-AI-xrd" secondAttribute="centerX" id="X3y-J0-jQg"/>
                             <constraint firstItem="YJA-nI-lKB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-54" id="YrS-ze-dXc"/>
                             <constraint firstItem="zA5-60-Xh6" firstAttribute="centerX" secondItem="y3c-om-wzD" secondAttribute="centerX" id="awH-wT-cDD"/>
@@ -348,7 +356,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="선택 완료">
                                             <attributes>
-                                                <color key="NSColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <font key="NSFont" size="16" name="SpoqaHanSansNeo-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -569,7 +577,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="로그아웃">
                                             <attributes>
-                                                <color key="NSColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <font key="NSFont" size="16" name="SpoqaHanSansNeo-Bold"/>
                                                 <font key="NSOriginalFont" size="16" name="SpoqaHanSansNeo-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -594,7 +602,6 @@
                             <constraint firstItem="bJs-Dd-saO" firstAttribute="centerX" secondItem="Kde-oV-f1X" secondAttribute="centerX" id="nmJ-zg-4af"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1qO-up-j4Y"/>
                     <connections>
                         <outlet property="characterLabel" destination="WYL-e7-GSZ" id="r63-gS-GoQ"/>
                         <outlet property="characterView" destination="RAT-VM-KiE" id="8Qb-aF-16p"/>

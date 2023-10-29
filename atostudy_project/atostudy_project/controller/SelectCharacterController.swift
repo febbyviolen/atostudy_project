@@ -42,7 +42,7 @@ class SelectCharacterController: UIViewController {
     }()
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = false
+        setupNavigationBar()
     }
     
     override func viewDidLoad() {
@@ -121,6 +121,11 @@ class SelectCharacterController: UIViewController {
         collectionView?.dataSource = self
         collectionView?.register(UINib(nibName: "CharacterCell", bundle: nil), forCellWithReuseIdentifier:
                                     "characterCell")
+    }
+    
+    private func setupNavigationBar() {
+        self.navigationController?.navigationBar.topItem?.backButtonDisplayMode = .minimal
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     private func setupUI() {

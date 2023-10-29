@@ -20,17 +20,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var recentGoogleLoginBubble: UIView?
     
     //test용 = kakao default 값
-    var recentLogin = UserDefaults().string(forKey: "recentLogin") ?? "KAKAO"
+    var recentLogin = UserDefaults.standard.string(forKey: "recentLogin") ?? "KAKAO"
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
+        setupUI()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        setupUI()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -42,18 +42,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func appleLoginTapped(_ sender: Any) {
+        recentLogin = "APPLE"
         self.performSegue(withIdentifier: "showNicknameController", sender: self)
     }
     
     @IBAction func kakaoLoginTapped(_ sender: Any) {
+        recentLogin = "KAKAO"
         self.performSegue(withIdentifier: "showNicknameController", sender: self)
     }
     
     @IBAction func naverLoginTapped(_ sender: Any) {
+        recentLogin = "NAVER"
         self.performSegue(withIdentifier: "showNicknameController", sender: self)
     }
     
     @IBAction func googleLoginTapped(_ sender: Any) {
+        recentLogin = "GOOGLE"
         self.performSegue(withIdentifier: "showNicknameController", sender: self)
     }
     
@@ -61,22 +65,22 @@ class ViewController: UIViewController {
         
         //가입한 기록이 있는 경우
         switch recentLogin {
-        case "kakao" :
+        case "KAKAO" :
             recentAppleLoginBubble?.isHidden = true
             recentKakaoLoginBubble?.isHidden = false
             recentNaverLoginBubble?.isHidden = true
             recentGoogleLoginBubble?.isHidden = true
-        case "apple" :
+        case "APPLE" :
             recentAppleLoginBubble?.isHidden = false
             recentKakaoLoginBubble?.isHidden = true
             recentNaverLoginBubble?.isHidden = true
             recentGoogleLoginBubble?.isHidden = true
-        case "naver" :
+        case "NAVER" :
             recentAppleLoginBubble?.isHidden = true
             recentKakaoLoginBubble?.isHidden = true
             recentNaverLoginBubble?.isHidden = false
             recentGoogleLoginBubble?.isHidden = true
-        case "google" :
+        case "GOOGLE" :
             recentAppleLoginBubble?.isHidden = true
             recentKakaoLoginBubble?.isHidden = true
             recentNaverLoginBubble?.isHidden = true

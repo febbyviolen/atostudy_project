@@ -58,7 +58,6 @@ class SelectCharacterController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showSignUpController" {
             if let vc = segue.destination as? SignUpController {
-                print(snsLogin, nickName)
                 vc.SNS = snsLogin
                 vc.nickName = nickName
                 vc.character = selectedCharacter
@@ -68,9 +67,12 @@ class SelectCharacterController: UIViewController {
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         //        API.shared
-        //            .signUp(snsType: "KAKAO", nickName: "aa", character: 1) { res in
+        //            .signUp(snsType: snsLogin, nickName: nickName, character: selectedCharacter) { res in
         //                if res.data != nil {
-//        snsLogin = res.data?.snsType
+        
+        UserDefaults.standard.setValue(snsLogin, forKey: "recentLogin")
+        
+        //        snsLogin = res.data?.snsType
 //        nickName = res.data?.nickName
 //        selectedCharacter = res.data?.character
         self.performSegue(withIdentifier: "showSignUpController", sender: self)

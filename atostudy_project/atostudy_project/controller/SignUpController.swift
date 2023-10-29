@@ -38,6 +38,7 @@ class SignUpController: UIViewController {
     }
     
     private func setupData() {
+        print(SNS, nickName)
         snsLabel.text = SNS
         nickNameLabel.text = nickName
         characterLabel.text = "\(character)"

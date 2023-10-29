@@ -30,7 +30,7 @@
 
 /* Begin PBXFileReference section */
 		257ACA266DE2D7ACB2D4AB66 /* Pods-atostudy_project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atostudy_project.debug.xcconfig"; path = "Target Support Files/Pods-atostudy_project/Pods-atostudy_project.debug.xcconfig"; sourceTree = "<group>"; };
-		8026BBDC2AECEF9D00711023 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = ../../../../Documents/API.swift; sourceTree = "<group>"; };
+		8026BBDC2AECEF9D00711023 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8026BBDE2AECFED900711023 /* SelectCharacterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCharacterController.swift; sourceTree = "<group>"; };
 		8026BBE42AED0B6600711023 /* characterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = characterModel.swift; sourceTree = "<group>"; };
 		8026BBE82AED21AA00711023 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };

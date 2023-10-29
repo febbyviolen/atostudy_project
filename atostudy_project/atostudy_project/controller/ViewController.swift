@@ -19,7 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var recentNaverLoginBubble: UIView?
     @IBOutlet weak var recentGoogleLoginBubble: UIView?
     
-    var recentLogin = "kakao"
+    //test용 = kakao default 값
+    var recentLogin = UserDefaults().string(forKey: "recentLogin") ?? "KAKAO"
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
@@ -30,6 +31,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         setupUI()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showNicknameController" {
+            if let VC = segue.destination as? NicknameController {
+                VC.snsLogin = recentLogin
+            }
+        }
     }
     
     @IBAction func appleLoginTapped(_ sender: Any) {
@@ -74,7 +83,7 @@ class ViewController: UIViewController {
             recentGoogleLoginBubble?.isHidden = false
         default:
             recentAppleLoginBubble?.isHidden = true
-            recentKakaoLoginBubble?.isHidden = false
+            recentKakaoLoginBubble?.isHidden = true
             recentNaverLoginBubble?.isHidden = true
             recentGoogleLoginBubble?.isHidden = true
         }

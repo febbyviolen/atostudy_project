@@ -13,6 +13,11 @@ class SelectCharacterController: UIViewController {
     @IBOutlet var nextButton: UIButton?
     
     let reuseId = "characterCell"
+    var characterArray = [characterData]()
+    
+    var snsLogin = ""
+    var nickName = ""
+    var selectedCharacter = 1
     
     private enum Const {
         static let itemSize = CGSize(width: 204, height: 301)
@@ -36,6 +41,10 @@ class SelectCharacterController: UIViewController {
         return layout
     }()
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,13 +55,24 @@ class SelectCharacterController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSignUpController" {
+            if let vc = segue.destination as? SignUpController {
+                print(snsLogin, nickName)
+                vc.SNS = snsLogin
+                vc.nickName = nickName
+                vc.character = selectedCharacter
+            }
+        }
+    }
+    
     @IBAction func nextButtonTapped(_ sender: Any) {
         //        API.shared
         //            .signUp(snsType: "KAKAO", nickName: "aa", character: 1) { res in
         //                if res.data != nil {
-        var test = signUpResponse(result: true,
-                                  message: "생성되었습니다",
-                                  data: signUpData(snsType: "카카오" , nickName: "밀리", character: 1, characterName: "노노"))
+//        snsLogin = res.data?.snsType
+//        nickName = res.data?.nickName
+//        selectedCharacter = res.data?.character
         self.performSegue(withIdentifier: "showSignUpController", sender: self)
         
         
@@ -77,7 +97,10 @@ class SelectCharacterController: UIViewController {
     }
     
     private func getData(){
-        //getData..
+//        API.shared.getCharacter { res in
+//            characterData = res
+//            collectionView?.reloadData()
+//        }
     }
     
     private func setupCollectionView() {
@@ -122,7 +145,7 @@ extension SelectCharacterController: UICollectionViewDelegate, UICollectionViewD
         }
         
         //test data
-        let data = testCharacterData
+        let data = testCharacterData //characterArray
         cell.config(imgURL: data[indexPath.row].filePath, engName: data[indexPath.row].engName)
         return cell
     }
@@ -160,6 +183,7 @@ extension SelectCharacterController: UICollectionViewDelegateFlowLayout {
         currentCell?.container?.transform = CGAffineTransform(scaleX: 1 - value, y: 1 - value)
         currentCell?.background?.layer.borderColor = UIColor(named: "primary 900")?.cgColor
         currentCell?.background?.layer.borderWidth = 2
+        selectedCharacter = curIndex + 1
         
         nextCell?.container?.transform = CGAffineTransform(scaleX: 0.7 + value, y: 0.7 + value)
         nextCell?.background?.layer.borderWidth = 0

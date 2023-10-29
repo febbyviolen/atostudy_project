@@ -25,6 +25,7 @@ class NicknameController: UIViewController {
     }()
     
     var nickNameBorderLine = CALayer()
+    var snsLogin = ""
     
     override func viewWillAppear(_ animated: Bool) {
         setupNavigationBar()
@@ -38,6 +39,15 @@ class NicknameController: UIViewController {
         setupUI()
         
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSelectCharacterController" {
+            if let vc = segue.destination as? SelectCharacterController {
+                vc.snsLogin = snsLogin
+                vc.nickName = nickNameTextField.text!
+            }
+        }
     }
     
     @objc func nextButtonTapped() {
@@ -104,6 +114,7 @@ class NicknameController: UIViewController {
         nextButton.titleLabel?.font = UIFont(name: "Spoqa Han Sans Neo Bold", size: 16)
         nextButton.titleLabel?.textColor = .white
         nextButton.backgroundColor = UIColor(named: "primary 900")
+        nextButton.isUserInteractionEnabled = true
     }
     
     private func textFieldNotOk() {
@@ -111,6 +122,7 @@ class NicknameController: UIViewController {
         nextButton.titleLabel?.font = UIFont(name: "Spoqa Han Sans Neo Bold", size: 16)
         nextButton.titleLabel?.textColor = .white
         nextButton.backgroundColor = UIColor(named: "black 500")
+        nextButton.isUserInteractionEnabled = false
     }
 }
 

@@ -274,17 +274,17 @@
                     <connections>
                         <outlet property="backButton" destination="ZbL-VK-khC" id="dVU-zh-xl1"/>
                         <outlet property="nickNameTextField" destination="Qxn-qh-uYC" id="q8o-vG-Ujq"/>
-                        <segue destination="GTw-rG-K9E" kind="show" id="PRc-eF-SVT"/>
+                        <segue destination="GTw-rG-K9E" kind="show" identifier="showSelectCharacterController" id="PRc-eF-SVT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cu9-fc-mvK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1977.8625954198471" y="-35.211267605633807"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Character Controller-->
         <scene sceneID="kjV-by-7JD">
             <objects>
-                <viewController id="GTw-rG-K9E" sceneMemberID="viewController">
+                <viewController id="GTw-rG-K9E" customClass="SelectCharacterController" customModule="atostudy_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qGn-jF-CRW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -313,25 +313,26 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4kF-sv-pj9">
-                                <rect key="frame" x="0.0" y="295.33333333333331" width="393" height="299.99999999999994"/>
+                                <rect key="frame" x="0.0" y="289.33333333333331" width="393" height="319.99999999999994"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="noi-Zt-aCh"/>
+                                    <constraint firstAttribute="height" constant="320" id="noi-Zt-aCh"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b6X-Yy-bC6">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b6X-Yy-bC6">
+                                    <size key="itemSize" width="204" height="301"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="100" minY="0.0" maxX="100" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="M6b-as-z58">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="characterCell" id="M6b-as-z58" customClass="CharacterCell" customModule="atostudy_project" customModuleProvider="target">
+                                        <rect key="frame" x="100" y="9.3333333333333339" width="204" height="301"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7cc-c4-QoE">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="204" height="301"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="204" height="301"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -341,7 +342,7 @@
                         <constraints>
                             <constraint firstItem="4kF-sv-pj9" firstAttribute="leading" secondItem="XhX-Gr-KTf" secondAttribute="leading" id="A1d-Tn-dRt"/>
                             <constraint firstItem="zY2-vE-mon" firstAttribute="leading" secondItem="XhX-Gr-KTf" secondAttribute="leading" constant="20" id="I23-ab-XEa"/>
-                            <constraint firstItem="4kF-sv-pj9" firstAttribute="top" secondItem="ktD-7N-lio" secondAttribute="bottom" constant="12" id="SVu-ff-VEB"/>
+                            <constraint firstItem="4kF-sv-pj9" firstAttribute="top" secondItem="ktD-7N-lio" secondAttribute="bottom" constant="6" id="SVu-ff-VEB"/>
                             <constraint firstItem="zY2-vE-mon" firstAttribute="top" secondItem="XhX-Gr-KTf" secondAttribute="top" constant="32" id="ZmV-fH-5yf"/>
                             <constraint firstItem="XhX-Gr-KTf" firstAttribute="trailing" secondItem="zY2-vE-mon" secondAttribute="trailing" constant="20" id="d3s-3C-crG"/>
                             <constraint firstItem="ktD-7N-lio" firstAttribute="centerX" secondItem="qGn-jF-CRW" secondAttribute="centerX" id="dg1-nb-pmc"/>
@@ -350,6 +351,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yQD-br-Y4D"/>
+                    <connections>
+                        <outlet property="collectionView" destination="4kF-sv-pj9" id="NPq-eN-8HO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwH-kO-syw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

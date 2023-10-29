@@ -13,7 +13,7 @@ class API {
     
     let getCharacterURL = "https://code.millionz.kr/api/ato/test/character"
     let signUpURL = "https://code.millionz.kr/api/ato/test/regist"
-    let token = "AtoStudy7_X8W5mVn$TzGQ!k#oLyJ"
+    let token = "{API}"
     
     func getCharacter(completion: @escaping ([characterData]) -> Void) {
         let header: HTTPHeaders = [

@@ -18,6 +18,7 @@ class SelectCharacterController: UIViewController {
     var snsLogin = ""
     var nickName = ""
     var selectedCharacter = 1
+    var selectedCharacterName = "노노"
     
     private enum Const {
         static let itemSize = CGSize(width: 204, height: 301)
@@ -50,7 +51,6 @@ class SelectCharacterController: UIViewController {
         
         // Do any additional setup after loading the view.
         setupUI()
-        setupCollectionView()
         getData()
         
     }
@@ -60,49 +60,65 @@ class SelectCharacterController: UIViewController {
             if let vc = segue.destination as? SignUpController {
                 vc.SNS = snsLogin
                 vc.nickName = nickName
-                vc.character = selectedCharacter
+                vc.character = selectedCharacterName
             }
         }
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
-        //        API.shared
-        //            .signUp(snsType: snsLogin, nickName: nickName, character: selectedCharacter) { res in
-        //                if res.data != nil {
-        
-        UserDefaults.standard.setValue(snsLogin, forKey: "recentLogin")
-        
-        //        snsLogin = res.data?.snsType
-//        nickName = res.data?.nickName
-//        selectedCharacter = res.data?.character
-        self.performSegue(withIdentifier: "showSignUpController", sender: self)
-        
-        
-        //                } else if res.error != nil {
-        //                    let attributedString = NSAttributedString(string: res.error?.message ?? "", attributes: [
-        //                        NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16), //your font here
-        //                        NSAttributedString.Key.foregroundColor : UIColor(named: "primary 900")!
-        //
-        //                    ])
-        //
-        //                    let alert = UIAlertController(title: res.error?.message, message: "", preferredStyle: .alert)
-        //                    alert.setValue(attributedString, forKey: "attributedTitle")
-        //
-        //                    let okAction = UIAlertAction(title: "네", style: .default, handler: nil)
-        //                    okAction.titleTextColor = UIColor(named: "black 900")
-        //
-        //                    alert.addAction(okAction)
-        //                    self.present(alert, animated: true)
-        //
-        //                }
-        //        }
+        API.shared
+            .signUp(snsType: snsLogin, nickName: nickName, character: selectedCharacter) { res in
+                
+                if res == nil {
+                    let attributedString = NSAttributedString(string: "오류가 발생했습니다", attributes: [
+                        NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16),
+                        NSAttributedString.Key.foregroundColor : UIColor(named: "primary 900")!
+                        
+                    ])
+                    
+                    let alert = UIAlertController(title: "오류가 발생했습니다", message: "", preferredStyle: .alert)
+                    alert.setValue(attributedString, forKey: "attributedTitle")
+                    
+                    let okAction = UIAlertAction(title: "네", style: .default, handler: nil)
+                    okAction.titleTextColor = UIColor(named: "black 900")
+                    
+                    alert.addAction(okAction)
+                    self.present(alert, animated: true)
+                } else if res?.error != nil {
+                    let attributedString = NSAttributedString(string: res?.error?.message ?? "", attributes: [
+                        NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16),
+                        NSAttributedString.Key.foregroundColor : UIColor(named: "primary 900")!
+                        
+                    ])
+                    
+                    let alert = UIAlertController(title: res?.error?.message, message: "", preferredStyle: .alert)
+                    alert.setValue(attributedString, forKey: "attributedTitle")
+                    
+                    let okAction = UIAlertAction(title: "네", style: .default, handler: nil)
+                    okAction.titleTextColor = UIColor(named: "black 900")
+                    
+                    alert.addAction(okAction)
+                    self.present(alert, animated: true)
+                    
+                } else if res?.data != nil {
+                    UserDefaults.standard.setValue(self.snsLogin, forKey: "recentLogin")
+                    
+                    self.snsLogin = res?.data?.snsType ?? ""
+                    self.nickName = res?.data?.nickname ?? ""
+                    self.selectedCharacter = res?.data?.character ?? 1
+                    self.selectedCharacterName = res?.data?.characterName ?? ""
+                    self.performSegue(withIdentifier: "showSignUpController", sender: self)
+                    
+                }
+            }
     }
     
     private func getData(){
-//        API.shared.getCharacter { res in
-//            characterData = res
-//            collectionView?.reloadData()
-//        }
+        API.shared.getCharacter { res in
+            self.characterArray = res
+            self.setupCollectionView()
+            self.collectionView?.reloadData()
+        }
     }
     
     private func setupCollectionView() {
@@ -152,8 +168,8 @@ extension SelectCharacterController: UICollectionViewDelegate, UICollectionViewD
         }
         
         //test data
-        let data = testCharacterData //characterArray
-        cell.config(imgURL: data[indexPath.row].filePath, engName: data[indexPath.row].engName)
+        let data = characterArray
+        cell.config(imgURL: data[indexPath.row].filePath, korName: data[indexPath.row].korName)
         return cell
     }
 }

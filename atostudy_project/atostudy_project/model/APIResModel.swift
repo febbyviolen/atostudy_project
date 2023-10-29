@@ -28,11 +28,20 @@ struct signUpResponse: Codable {
     var data: signUpData?
 }
 
+struct signUpErrorResponse: Codable {
+    var result: Bool
+    var message: String
+    var error: signUpError?
+    var data: String?
+}
+
+
 struct signUpData: Codable {
     var snsType: String
-    var nickName: String
+    var nickname: String
     var character: CLong
     var characterName: String
+    
 }
 
 struct signUpError: Codable {

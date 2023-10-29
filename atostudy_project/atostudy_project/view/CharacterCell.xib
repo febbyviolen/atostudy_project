@@ -35,17 +35,18 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ia-dN-ul9">
                                                 <rect key="frame" x="0.0" y="0.0" width="184" height="241"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NONO" translatesAutoresizingMaskIntoConstraints="NO" id="DtL-1N-Agp">
-                                                        <rect key="frame" x="40.666666666666657" y="21.666666666666671" width="103" height="198"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="198" id="ByO-i0-0lL"/>
-                                                        </constraints>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DODO" translatesAutoresizingMaskIntoConstraints="NO" id="DtL-1N-Agp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="184" height="241"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="1" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="DtL-1N-Agp" secondAttribute="trailing" id="042-wN-JgA"/>
                                                     <constraint firstItem="DtL-1N-Agp" firstAttribute="centerY" secondItem="2Ia-dN-ul9" secondAttribute="centerY" id="6ML-EV-zVT"/>
+                                                    <constraint firstItem="DtL-1N-Agp" firstAttribute="leading" secondItem="2Ia-dN-ul9" secondAttribute="leading" id="OFj-S4-n9L"/>
                                                     <constraint firstItem="DtL-1N-Agp" firstAttribute="centerX" secondItem="2Ia-dN-ul9" secondAttribute="centerX" id="bm9-qX-EsQ"/>
+                                                    <constraint firstItem="DtL-1N-Agp" firstAttribute="top" secondItem="2Ia-dN-ul9" secondAttribute="top" id="n7y-x7-of3"/>
+                                                    <constraint firstAttribute="bottom" secondItem="DtL-1N-Agp" secondAttribute="bottom" id="uSr-4Z-ZLC"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdY-oK-UZe">
@@ -116,7 +117,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="NONO" width="103" height="200"/>
+        <image name="DODO" width="102" height="199"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

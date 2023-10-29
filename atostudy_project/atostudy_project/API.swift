@@ -13,7 +13,7 @@ class API {
     
     let getCharacterURL = "https://code.millionz.kr/api/ato/test/character"
     let signUpURL = "https://code.millionz.kr/api/ato/test/regist"
-    let token = "{API}"
+    let token = "token"
     
     func getCharacter(completion: @escaping ([characterData]) -> Void) {
         let header: HTTPHeaders = [
@@ -21,7 +21,6 @@ class API {
         ]
         
         AF.request(getCharacterURL, method: .get ,encoding: JSONEncoding.default, headers: header).responseDecodable(of: characterResponse.self) { response in
-            debugPrint(response)
             switch response.result {
             case .success(let characterResponse):
                 let response = characterResponse.data
@@ -32,14 +31,14 @@ class API {
         }
     }
     
-    func signUp(snsType: String, nickName: String, character: CLong, completion: @escaping (signUpResponse) -> Void) {
+    func signUp(snsType: String, nickName: String, character: CLong, completion: @escaping (signUpResponse?) -> Void) {
         let header: HTTPHeaders = [
             "Authorization": token
         ]
         
         let body: [String: Any] = [
             "snsType" : snsType,
-            "nickName" : nickName,
+            "nickname" : nickName,
             "character": character
         ]
         
@@ -47,15 +46,23 @@ class API {
             debugPrint(response)
             switch response.result {
             case .success(let signUpResponse):
-                let response = signUpResponse
-                completion(response)
+                completion(signUpResponse)
             case .failure(let error):
-                //test
-                let test = signUpResponse(result: true, message: "사용할 수 없는 닉네임입니다", error: signUpError(code: "E999", viewType: "NONE", message: "사용할 수 없는 닉네임입니다"))
-                completion(test)
-                print("Character request failed with error: \(error)")
+                if let data = response.data {
+                    if let signUpResponseE = try? JSONDecoder().decode(signUpErrorResponse.self, from: data) {
+                        let errRes = signUpResponse(result: signUpResponseE.result, message: signUpResponseE.message, error: signUpResponseE.error)
+                        completion(errRes)
+                    } else {
+                        print("Character request failed with error: \(error)")
+                        completion(nil)
+                    }
+                } else {
+                    print("Character request failed with error: \(error)")
+                    completion(nil)
+                }
             }
         }
+
     }
 }
 

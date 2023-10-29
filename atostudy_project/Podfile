@@ -7,5 +7,6 @@ target 'atostudy_project' do
 
   # Pods for atostudy_project
 	pod 'Alamofire'
+	pod 'Kingfisher'
 
 end

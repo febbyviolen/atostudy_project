@@ -11,6 +11,7 @@ class NicknameController: UIViewController {
 
     @IBOutlet weak var backButton: UINavigationItem!
     @IBOutlet weak var nickNameTextField: UITextField!
+    @IBOutlet weak var nickNameCountLabel: UILabel?
     
     lazy var nextButton: UIButton = {
         let button = UIButton(type: .system)
@@ -22,6 +23,15 @@ class NicknameController: UIViewController {
         button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         button.backgroundColor = UIColor(named: "primary 900")
         return button
+    }()
+    
+    lazy var nickNameWarningLabel: UILabel = {
+        let label = UILabel()
+        label.text = "한번 만들면 변경할 수 없어요!"
+        label.font = UIFont(name: "Spoqa Han Sans Neo Regular", size: 14)
+        label.textColor = UIColor(named: "primary 900")
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
     
     var nickNameBorderLine = CALayer()
@@ -61,18 +71,21 @@ class NicknameController: UIViewController {
     
     private func setupUI(){
         keyboardNotShownUI()
-        setupButtonUI()
+        setupProgrammaticalUI()
         textFieldNotOk()
         setupTextField()
     }
     
-    private func setupButtonUI() {
+    private func setupProgrammaticalUI() {
         view.addSubview(nextButton)
+        view.addSubview(nickNameWarningLabel)
         NSLayoutConstraint.activate([
             nextButton.heightAnchor.constraint(equalToConstant: 56),
             nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             nextButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            nextButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -16)
+            nextButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -16),
+            nickNameWarningLabel.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: -16),
+            nickNameWarningLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
     
@@ -124,6 +137,7 @@ class NicknameController: UIViewController {
 
 extension NicknameController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
+        nickNameCountLabel?.text = "\(textField.text?.count ?? 0)/12"
         if textField.text?.count ?? 0 > 1
             && textField.text?.count ?? 0 < 13   {
             textFieldIsOk()

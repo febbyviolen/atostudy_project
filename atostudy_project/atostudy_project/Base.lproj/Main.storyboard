@@ -234,9 +234,9 @@
                         <outlet property="kakaoLoginButton" destination="Xzz-w5-epf" id="3Rs-EL-NZa"/>
                         <outlet property="naverLoginButton" destination="y3c-om-wzD" id="GDb-wx-MM1"/>
                         <outlet property="recentAppleLoginBubble" destination="LoH-PG-gjz" id="ggp-yg-WoI"/>
-                        <outlet property="recentGoogleLoginBubble" destination="zA5-60-Xh6" id="ifQ-ui-xDx"/>
+                        <outlet property="recentGoogleLoginBubble" destination="tK9-Zh-aLh" id="CxP-6R-qLO"/>
                         <outlet property="recentKakaoLoginBubble" destination="GL7-B0-ZVv" id="sww-je-8f5"/>
-                        <outlet property="recentNaverLoginBubble" destination="tK9-Zh-aLh" id="zBQ-MU-ODZ"/>
+                        <outlet property="recentNaverLoginBubble" destination="zA5-60-Xh6" id="mha-ay-Ahz"/>
                         <segue destination="JxD-gx-XZR" kind="show" identifier="showNicknameController" id="kaM-fo-ii0"/>
                     </connections>
                 </viewController>
@@ -266,21 +266,38 @@
                                 <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한글, 영어, 숫자 중 2자~12자로 가능해요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGz-FU-HEc">
+                                <rect key="frame" x="20" y="261.33333333333331" width="204" height="16"/>
+                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="12"/>
+                                <color key="textColor" name="primary 900"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUh-6b-oxn">
+                                <rect key="frame" x="346" y="261.33333333333331" width="27" height="16"/>
+                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="12"/>
+                                <color key="textColor" name="black 700"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dRH-ol-0Kq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="XGz-FU-HEc" firstAttribute="leading" secondItem="dRH-ol-0Kq" secondAttribute="leading" constant="20" id="HFo-Gg-281"/>
+                            <constraint firstItem="dRH-ol-0Kq" firstAttribute="trailing" secondItem="PUh-6b-oxn" secondAttribute="trailing" constant="20" id="IQy-Uk-2lD"/>
                             <constraint firstItem="dRH-ol-0Kq" firstAttribute="trailing" secondItem="Qxn-qh-uYC" secondAttribute="trailing" constant="20" id="KoE-0O-td2"/>
                             <constraint firstItem="Qxn-qh-uYC" firstAttribute="top" secondItem="duj-Te-VjT" secondAttribute="bottom" constant="24" id="QeY-bT-WBH"/>
                             <constraint firstItem="dRH-ol-0Kq" firstAttribute="trailing" secondItem="duj-Te-VjT" secondAttribute="trailing" constant="20" id="TAa-kO-c6S"/>
                             <constraint firstItem="duj-Te-VjT" firstAttribute="top" secondItem="dRH-ol-0Kq" secondAttribute="top" constant="32" id="UAg-Qd-u1w"/>
+                            <constraint firstItem="XGz-FU-HEc" firstAttribute="top" secondItem="Qxn-qh-uYC" secondAttribute="bottom" constant="20" id="VIN-Sz-O8r"/>
                             <constraint firstItem="Qxn-qh-uYC" firstAttribute="leading" secondItem="dRH-ol-0Kq" secondAttribute="leading" constant="20" id="mzd-FI-dkf"/>
+                            <constraint firstItem="PUh-6b-oxn" firstAttribute="top" secondItem="Qxn-qh-uYC" secondAttribute="bottom" constant="20" id="zU0-uA-FlE"/>
                             <constraint firstItem="duj-Te-VjT" firstAttribute="leading" secondItem="dRH-ol-0Kq" secondAttribute="leading" constant="20" id="za0-WD-Exz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZbL-VK-khC"/>
                     <connections>
                         <outlet property="backButton" destination="ZbL-VK-khC" id="dVU-zh-xl1"/>
+                        <outlet property="nickNameCountLabel" destination="PUh-6b-oxn" id="sfk-nD-ycx"/>
                         <outlet property="nickNameTextField" destination="Qxn-qh-uYC" id="q8o-vG-Ujq"/>
                         <segue destination="GTw-rG-K9E" kind="show" identifier="showSelectCharacterController" id="PRc-eF-SVT"/>
                     </connections>
@@ -644,6 +661,9 @@
         <image name="img_complete" width="214" height="208"/>
         <image name="imge_pick" width="60" height="50"/>
         <image name="logo" width="184" height="39"/>
+        <namedColor name="black 700">
+            <color red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="black 800">
             <color red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

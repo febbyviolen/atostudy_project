@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CharacterCell: UICollectionViewCell {
 
@@ -35,9 +36,21 @@ class CharacterCell: UICollectionViewCell {
         
     }
     
-    func config(imgURL: String, engName: String) {
-        img?.image = UIImage(named: imgURL)
-        nameLabel?.text = engName
+    func config(imgURL: String, korName: String) {
+        let url = URL(string: imgURL)
+        img?.kf.setImage(with: url)
+        nameLabel?.text = korName
+        
+        switch korName {
+        case "노노" :
+            characterBackground?.backgroundColor = UIColor(named: "yellow_NONO")
+        case "고고" :
+            characterBackground?.backgroundColor = UIColor(named: "purple_GOGO")
+        case "두두" :
+            characterBackground?.backgroundColor = UIColor(named: "blue_DODO")
+        default :
+            characterBackground?.backgroundColor = UIColor(named: "yellow_NONO")
+        }
     }
 }
 

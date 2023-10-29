@@ -18,7 +18,7 @@ class SignUpController: UIViewController {
     
     var SNS = ""
     var nickName = ""
-    var character = 0
+    var character = ""
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
@@ -39,7 +39,6 @@ class SignUpController: UIViewController {
     }
     
     private func setupData() {
-        print(SNS, nickName)
         snsLabel.text = SNS
         nickNameLabel.text = nickName
         characterLabel.text = "\(character)"
